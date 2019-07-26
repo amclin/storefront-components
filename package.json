@@ -2,10 +2,12 @@
   "name": "storefront-components",
   "version": "0.0.1",
   "description": "Framework agnostic components for a headless ecommerce site",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "prettier": "prettier --write *"
+    "prettier": "prettier --write *",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -25,13 +27,45 @@
   },
   "homepage": "https://github.com/amclin/storefront-components#readme",
   "devDependencies": {
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/commit-analyzer": "^6.2.0",
+    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/github": "^5.4.2",
+    "@semantic-release/npm": "^5.1.13",
+    "@semantic-release/release-notes-generator": "^7.2.1",
     "husky": "^3.0.1",
     "prettier": "^1.18.2",
-    "pretty-quick": "^1.11.1"
+    "pretty-quick": "^1.11.1",
+    "semantic-release": "^15.13.18"
   },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "docs",
+            "package.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      "@semantic-release/github",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ]
+    ]
   }
 }
