@@ -1,0 +1,26 @@
+{
+  "name": "storefront-components",
+  "version": "0.0.1",
+  "description": "Framework agnostic components for a headless ecommerce site",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amclin/storefront-components.git"
+  },
+  "keywords": [
+    "ecommerce",
+    "components",
+    "products",
+    "storefront",
+    "headless"
+  ],
+  "author": "Anthony McLin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amclin/storefront-components/issues"
+  },
+  "homepage": "https://github.com/amclin/storefront-components#readme"
+}
