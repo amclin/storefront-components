@@ -34,7 +34,7 @@
     "@semantic-release/github": "^5.5.8",
     "@semantic-release/npm": "^5.3.5",
     "@semantic-release/release-notes-generator": "^9.0.1",
-    "commitlint": "^8.3.5",
+    "commitlint": "^12.1.4",
     "husky": "^4.2.3",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
